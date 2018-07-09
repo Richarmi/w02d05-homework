@@ -189,9 +189,12 @@ const makeBuddies = () => {
 // Chapter 6
 // ============
 const leaveTheShire = () => {
+  const $theseHobbits = $('#The-Shire').find('ul');
 
-  $('#The-Shire').remove('.hobbits');
-  ('.hobbits').appendTo('#the-fellowship');
+  $('#Rivendell').append($theseHobbits);
+
+  $('#The-Shire').remove($theseHobbits);
+
 
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
 
@@ -210,6 +213,8 @@ const beautifulStranger = () => {
   // 1. change the buddy 'Strider' textnode to "Aragorn"
 
   // hint: You can get a list of elements by tag name, such as 'aside'
+
+  $('li.contains("Strider")').text("Aragorn");
 
 
 
