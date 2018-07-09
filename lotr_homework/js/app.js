@@ -161,12 +161,12 @@ const keepItSecretKeepItSafe = () => {
 const makeBaddies = () => {
   console.log("these are the villains of Mordor ");
   // 1. display an unordered list of baddies in Mordor
-  $mordor = $('.Mordor');
+  $mordor = $('#Mordor');
   $mordorList = $mordor.append('<ul/>');
 
   for(let i = 0; i < baddies.length; i++)
   {
-    $mordorList.append('<li class="baddy">${baddies[i]}</li>');
+    $mordorList.append(`<li class="baddy">${baddies[i]}</li>`);
     console.log($mordorList);
   }
 
@@ -236,6 +236,8 @@ const beautifulStranger = () => {
   // 1. change the buddy 'Strider' textnode to "Aragorn"
 
   // hint: You can get a list of elements by tag name, such as 'aside'
+
+
 
 };
 
