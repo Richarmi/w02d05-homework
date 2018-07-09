@@ -65,10 +65,11 @@ const makeMiddleEarth = () => {
 
   //   3d. appends each land to the middle-earth section
 
-  console.log("These are the lands of Middle Earth")
+  console.log("These are the lands of Middle Earth");
+  console.log(lands.length)
   for(let i = 0; i < lands.length; i++)
   {
-    $($middleEarth).append(`<article id="${lands[i]}"><h1>${lands[i]}</h1></article>`);
+    $middleEarth.append(`<article id="${lands[i]}"><h1>${lands[i]}</h1></article>`);
     console.log($middleEarth);
   }
 
@@ -88,17 +89,6 @@ const makeHobbits = () => {
 
   // 2. give each hobbit a class of "hobbit"
 
-
-
-  //Alexandre
-  // const $ul = $('<ul/>');
-  // for(let i = 0; i < hobbits.length; i++) {
-  // const $li = $('<li/>');
-  // $li.attr('id', 'hobbit', hobbits[i]);
-  // $li.text(hobbits[i]);
-  // $ul.append($li);
-  // }
-
   console.log("These are the Hobbits")
 
   // $hobbitList = $('<ul/>')
@@ -106,16 +96,6 @@ const makeHobbits = () => {
   for(let i = 0; i < hobbits.length; i++)
   {
     $theseHobbits.append(`<li class="hobbit">${hobbits[i]}</li>`);
-    // $hobbitList.append(`li class="hobbit">${hobbits[i]}</li>`)
-
-    //const $hobbitli = $('<li></li>');
-    //$hobbitli.addClass('hobbit');
-    //$hobbitLi.text(hobbits[i]);
-    //$hobbitList.append($hobbitLi)
-
-    // or hobbitList.attr('class', 'hobbit');
-    //$('#The-Shire').appendTo($hobbitList);
-
   }
 
   //$('#The-Shire').append(hobbitList);
@@ -173,16 +153,6 @@ const makeBaddies = () => {
   // 2. give each of the baddies a class of "baddy"
 
   // 3. remember to append them to Mordor
-        //Jessamyn
-        //   // 2. display an unordered list of buddies in the aside
-        // for (let i = 0; i < buddies.length; i++){
-        //
-        // // 3. give each of the buddies a class of "buddy"
-        // // just like baddies
-        // $('<li>').addClass('buddy').text(buddies[i]).appendTo($aside);
-        // }
-        //
-        // };
 };
 
 // COMMIT YOUR WORK
@@ -200,9 +170,13 @@ const makeBuddies = () => {
   for(let i = 0; i < buddies.length; i++)
   {
     $buddiesList.append(`<li class="buddy">${buddies[i]}</li>`);
-    console.log($Buddies.list);
+    console.log($buddiesList);
   }
+
+  $('#middle-earth').append($theseBuddies);
+  $theseBuddies.append($buddiesList);
   // 2. display an unordered list of buddies in the aside
+
 
   // 3. give each of the buddies a class of "buddy"
 
@@ -216,7 +190,7 @@ const makeBuddies = () => {
 // ============
 const leaveTheShire = () => {
 
-  $('#The-Shire').empty('.hobbits');
+  $('#The-Shire').remove('.hobbits');
   ('.hobbits').appendTo('#the-fellowship');
 
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
@@ -373,16 +347,17 @@ $(() => {
 
   const buttonClicks = setInterval(
     function() {
-      if(index > $buttons.length - 1) {
-        return clearInterval(buttonClicks);
-      }
-      $buttons[index].click();
+      // if(index > $buttons.length - 1) {
+      //   return clearInterval(buttonClicks);
+      // }
+      // $buttons[index].click();
     }
   )
   for(let i = 0; i < $buttons.length; i++)
   {
     console.log("Clicking one button");
-    $buttons[i].click().delay(5000);
+    //$buttons[i].click().delay(5000);
+    //$buttons[i].click();
   }
 
 });
