@@ -233,6 +233,7 @@ const forgeTheFellowShip = () => {
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
   $fellowship.append($theseBuddies);
   $fellowship.append($theseHobbits);
+  $('body').append($fellowship);
   console.log($fellowship.children());
 
 };
@@ -245,7 +246,8 @@ const forgeTheFellowShip = () => {
 // ============
 const theBalrog = () => {
 
-  $('li.contains("Gandalf")').text("Gandalf the White").addClass("the-white");
+  $('li:contains("Gandalf")').text("Gandalf the White").addClass("the-white");
+  console.log("Gandalf vs. the Balrog");
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
 
   // 2. add a class "the-white" to this element
