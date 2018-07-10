@@ -285,17 +285,17 @@ const hornOfGondor = () => {
 // ============
 const itsDangerousToGoAlone = () => {
 
-  // // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
-  // const $frodo = $('li:contains("Frodo Baggins")');
-  // const $sam = $(`li:contains("Samwise 'Sam' Gamgee")`);
-  // $frodo.remove();
-  // $sam.remove();
-  // // 2. add a div with an id of 'mount-doom' to Mordor
-  //
-  // $mountDoom = $('<div id="mount-doom"></div>');
-  // $mountDoom.append($frodo);
-  // $mountDoom.append($sam);
-  // $('#Mordor').append($mountDoom);
+  // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
+  const $frodo = $('li:contains("Frodo Baggins")');
+  const $sam = $(`li:contains("Samwise 'Sam' Gamgee")`);
+  $frodo.remove();
+  $sam.remove();
+  // 2. add a div with an id of 'mount-doom' to Mordor
+
+  $mountDoom = $('<div id="mount-doom"></div>');
+  $mountDoom.append($frodo);
+  $mountDoom.append($sam);
+  $('#Mordor').append($mountDoom);
 
 };
 
