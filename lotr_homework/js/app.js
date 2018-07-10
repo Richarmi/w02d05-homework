@@ -309,18 +309,16 @@ const weWantsIt = () => {
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
   let $gollum = $('<div id="gollum"></div>');
+  $('#Mordor').append($gollum);
 
   // 2. Move the ring from Frodo and give it to Gollum
-  //$theOneRing = $('<div id="the-ring"></div>');
 
+  // 3. Move Gollum into Mount Doom
+  $('#mount-doom').append($gollum);
 
-  // $frodo = $("li:contains('Frodo Baggins')");
-  // $frodo.remove($('#the-ring'));
-  // $gollum.append($('#the-ring'));
-  //
-  // // 3. Move Gollum into Mount Doom
-  // $('#mount-doom').append($('#the-ring'));
-
+  $frodo = $("li:contains('Frodo Baggins')");
+  $frodo.remove('#the-ring');
+  $gollum.append('#the-ring');
 
 };
 
