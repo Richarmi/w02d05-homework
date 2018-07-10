@@ -72,7 +72,6 @@ const makeMiddleEarth = () => {
     $middleEarth.append(`<article id="${lands[i]}"><h1>${lands[i]}</h1></article>`);
     console.log($middleEarth);
   }
-
 };
 
 // COMMIT YOUR WORK
@@ -105,7 +104,6 @@ const makeHobbits = () => {
   // hint: create a 'ul' outside the loop upon which to append the 'li's
 
   // hint: get 'The-Shire' by using its id
-
 };
 
 // COMMIT YOUR WORK
@@ -118,9 +116,8 @@ const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
 
-
   $theOneRing = $('<div id="the-ring"></div>');
-  // theOneRing.attr('id', 'the-ring');
+
   $("li:contains('Frodo Baggins')").append($theOneRing);
 
   // 2. add the ring as a child of Frodo
@@ -177,7 +174,6 @@ const makeBuddies = () => {
   $theseBuddies.append($buddiesList);
   // 2. display an unordered list of buddies in the aside
 
-
   // 3. give each of the buddies a class of "buddy"
 
 };
@@ -194,7 +190,6 @@ const leaveTheShire = () => {
   $('#Rivendell').append($theseHobbits);
 
   $('#The-Shire').remove($theseHobbits);
-
 
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
 
