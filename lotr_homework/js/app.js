@@ -209,7 +209,7 @@ const beautifulStranger = () => {
 
   // hint: You can get a list of elements by tag name, such as 'aside'
 
-  $('li.contains("Strider")').text("Aragorn");
+  $('li:contains("Strider")').text("Aragorn");
 
 
 
@@ -224,7 +224,7 @@ const beautifulStranger = () => {
 const forgeTheFellowShip = () => {
 
   // 1. create a new div with an id 'the-fellowship'
-  $fellowship = ('<div id="the-fellowship">');
+  $fellowship = $('<div id="the-fellowship">');
 
   // 2. add an h1 with the text 'The Fellowship' to this new div
   $fellowship.append('<h1>The Fellowship</h1>')
@@ -233,6 +233,7 @@ const forgeTheFellowShip = () => {
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
   $fellowship.append($theseBuddies);
   $fellowship.append($theseHobbits);
+  console.log($fellowship.children());
 
 };
 
