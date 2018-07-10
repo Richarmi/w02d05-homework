@@ -265,10 +265,15 @@ const theBalrog = () => {
 const hornOfGondor = () => {
 
   // 1. create a pop-up alert that the horn of gondor has been blown
+  alert("The horn of Gondor has been blown!");
 
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
+  $('li:contains("Boromir")').remove();
 
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
+  // $orcs = $('#Mordor.').find('ul');
+  // $orcs.empty();
+  $('li.baddy:contains("The Uruk-hai")').remove();
 
 };
 
@@ -280,9 +285,17 @@ const hornOfGondor = () => {
 // ============
 const itsDangerousToGoAlone = () => {
 
-  // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
-
-  // 2. add a div with an id of 'mount-doom' to Mordor
+  // // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
+  // const $frodo = $('li:contains("Frodo Baggins")');
+  // const $sam = $(`li:contains("Samwise 'Sam' Gamgee")`);
+  // $frodo.remove();
+  // $sam.remove();
+  // // 2. add a div with an id of 'mount-doom' to Mordor
+  //
+  // $mountDoom = $('<div id="mount-doom"></div>');
+  // $mountDoom.append($frodo);
+  // $mountDoom.append($sam);
+  // $('#Mordor').append($mountDoom);
 
 };
 
@@ -295,10 +308,19 @@ const itsDangerousToGoAlone = () => {
 const weWantsIt = () => {
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
+  let $gollum = $('<div id="gollum"></div>');
 
   // 2. Move the ring from Frodo and give it to Gollum
+  //$theOneRing = $('<div id="the-ring"></div>');
+
+
+  $frodo = $("li:contains('Frodo Baggins')");
+  $frodo.remove($theOneRing);
+  $gollum.append($theOneRing);
 
   // 3. Move Gollum into Mount Doom
+
+
 
 };
 
