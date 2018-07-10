@@ -314,12 +314,12 @@ const weWantsIt = () => {
   //$theOneRing = $('<div id="the-ring"></div>');
 
 
-  $frodo = $("li:contains('Frodo Baggins')");
-  $frodo.remove($theOneRing);
-  $gollum.append($theOneRing);
-
-  // 3. Move Gollum into Mount Doom
-
+  // $frodo = $("li:contains('Frodo Baggins')");
+  // $frodo.remove($('#the-ring'));
+  // $gollum.append($('#the-ring'));
+  //
+  // // 3. Move Gollum into Mount Doom
+  // $('#mount-doom').append($('#the-ring'));
 
 
 };
@@ -336,7 +336,32 @@ const thereAndBackAgain = () => {
 
   // 2. remove all the baddies from the DOM
 
+
+
   // 3. Move all the hobbits back to the shire
+  const $frodo = $('li:contains("Frodo Baggins")');
+  const $sam = $(`li:contains("Samwise 'Sam' Gamgee")`);
+  const $merry = $(`li:contains("Meriadoc 'Merry' Brandybuck")`);
+  const $pippin = $(`li:contains("Peregrin 'Pippin' Took")`);
+  $frodo.remove();
+  $sam.remove();
+  $pippin.remove();
+  $merry.remove();
+
+  let $hobbitReturn = $('<ul></ul>')
+
+  $($hobbitReturn).append($frodo);
+  $($hobbitReturn).append($sam);
+  $($hobbitReturn).append($merry);
+  $($hobbitReturn).append($pippin);
+  $('#The-Shire').append($hobbitReturn);
+
+  $('#Mordor').empty();
+  $('#Mordor').append("<h1>Mordor</h1>");
+
+
+
+
 
 };
 
